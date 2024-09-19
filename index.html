@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Fantasy Team</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>NBA FANTASY 2014-2024</h1>
+  </header>
+
+  <div id="fantasy-team">
+    <h2>My Fantasy Team</h2>
+    <div id="team-container">
+      <div id="pg"></div>
+      <div id="sg"></div>
+      <div id="sf"></div>
+      <div id="pf"></div>
+      <div id="c"></div>
+    </div>
+  </div>
+
+  <h2>NBA Player Search</h2>
+
+  <div id="player-search">
+    <form id="search-form">
+      <select id="position">
+        <option value="PG">PG</option>
+        <option value="SG">SG</option>
+        <option value="SF">SF</option>
+        <option value="PF">PF</option>
+        <option value="C">C</option>
+      </select>
+      
+      <label>Points: 0 - 2000</label>
+      <input type="range" id="points" min="0" max="20000" value="0" oninput="this.nextElementSibling.value = this.value">
+      <output>0</output>
+      <!-- <br> -->
+      <label>2 point %: 0-100%</label>
+      <input type="range" id="two-percent" min="0" max="100" value="0" oninput="this.nextElementSibling.value = this.value">
+      <output>0</output>
+      <label>3 point % : 0-100%:</label>
+      <input type="range" id="three-percent" name="three-percent" min="0" max="100" value="0" oninput="this.nextElementSibling.value = this.value">
+      <output>0</output>
+      <!-- <br> -->
+      <button type="submit">Search Player</button>
+    </form>
+
+    <table id="results-table">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Position</th>
+          <th>Points</th>
+          <th>FG%</th>
+          <th>3P%</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="results-body">
+
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
